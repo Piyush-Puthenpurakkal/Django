@@ -1,0 +1,39 @@
+<!-- chat/templates/chat/room.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat Room</title>
+    {% load static %} <!-- Load static files -->
+
+    <!-- Link to your custom styles -->
+    <link rel="stylesheet" href="{% static 'chat/styles.css' %}">
+</head>
+<body>
+    <h2>Room: {{ room_name }}</h2>
+
+    <div>
+        <!-- Video and Audio Control Buttons -->
+        <button id="toggleVideo">Disable Video</button>
+        <button id="toggleAudio">Disable Audio</button>
+    </div>
+
+    <div>
+        <!-- Video Elements -->
+        <h3>Local Stream:</h3>
+        <video id="localVideo" autoplay playsinline></video>
+        
+        <h3>Remote Stream:</h3>
+        <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+
+    <!-- Room name passed to the JavaScript -->
+    <script>
+        const roomName = "{{ room_name }}";
+    </script>
+
+    <!-- Include your custom JavaScript for WebRTC -->
+    <script src="{% static 'chat/video_chat.js' %}"></script>
+</body>
+</html>

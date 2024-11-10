@@ -1,0 +1,24 @@
+<!-- chat/templates/chat/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Video Chat Room</title>
+</head>
+<body>
+    <h2>Enter a Room Name to Start Video Chat</h2>
+    <form action="" method="get" id="roomForm">
+        <input type="text" id="roomNameInput" placeholder="Enter Room Name" required>
+        <button type="submit">Join Room</button>
+    </form>
+
+    <script>
+        document.getElementById('roomForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const roomName = document.getElementById('roomNameInput').value;
+            window.location.href = `/chat/room/${roomName}/`;
+        });
+    </script>
+</body>
+</html>

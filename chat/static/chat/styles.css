@@ -1,0 +1,40 @@
+/* chat/static/chat/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+video {
+    width: 100%;  /* Adjust width as needed */
+    max-width: 600px; /* Set a maximum width */
+    border: 1px solid black;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Rounded corners */
+    background-color: black; /* Black background for the video area */
+}
+
+button {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+div {
+    text-align: center; /* Center the buttons and video */
+}
